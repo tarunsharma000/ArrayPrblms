@@ -5,7 +5,6 @@ int maxmProfit(int arr[],int n)
     int mini=arr[0];
     int psf=0;
     int dp[n];
-    dp[0]=0;
     for(int i=1;i<n;i++)
     {
         if(mini>arr[i])
@@ -34,7 +33,7 @@ int maxmProfit(int arr[],int n)
         psfr=maxi-arr[i];
         if(psfr>dp[i+1])
         {
-            dpr[i]=psf;
+            dpr[i]=psfr;
         }
         else{
             dpr[i]=dpr[i+1];
